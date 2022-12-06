@@ -8,7 +8,7 @@ import { HeadElement } from "@/components/HeadElement.tsx";
 import { Header } from "@/components/Header.tsx";
 import IconCart from "@/components/IconCart.tsx";
 import { List, Product } from "../utils/types.ts";
-
+ 
 const q = `{
   products(first: 10) {
     nodes {
