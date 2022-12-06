@@ -11,6 +11,7 @@
     "twind": "https://esm.sh/v98/twind@0.16.17",
     "twind/": "https://esm.sh/v98/twind@0.16.17/",
     "$std/": "https://deno.land/std@0.154.0/",
-    "swr": "https://esm.sh/v98/swr@2.0.0-beta.6?alias=react:preact/compat&external=preact/compat"
+    "swr": "https://esm.sh/v98/swr@2.0.0-beta.6?alias=react:preact/compat&external=preact/compat",
+    "ga/": "https://deno.land/x/fresh-ga@0.1.0/"
   }
 }
