@@ -10,4 +10,8 @@ import manifest from "./fresh.gen.ts";
 import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
 
-await start(manifest, { plugins: [twindPlugin(twindConfig)] });
+import { gaPlugin } from "ga/mod.ts";
+const GA = Deno.env.get("ga");
+
+
+await start(manifest, { plugins: [twindPlugin(twindConfig),gaPlugin({ gaKey: GA })] });
