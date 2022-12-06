@@ -13,5 +13,4 @@ import twindConfig from "./twind.config.ts";
 import { gaPlugin } from "ga/mod.ts";
 const GA = Deno.env.get("ga");
 
-
 await start(manifest, { plugins: [twindPlugin(twindConfig),gaPlugin({ gaKey: GA })] });
