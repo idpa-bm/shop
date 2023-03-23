@@ -39,6 +39,7 @@ interface Data {
 
 export const handler: Handlers<Data> = {
   async GET(_req, ctx) {
+    fetch("https://eu-central-1.aws.data.mongodb-api.com/app/application-0-tvajx/endpoint/idpa/count?path=" + ctx.params.way )
     const data = await graphql<Data>(q);
     return ctx.render(data);
   },
