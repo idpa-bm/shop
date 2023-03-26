@@ -5,24 +5,19 @@ export function Footer() {
     <footer
       class="w-11/12 max-w-5xl mx-auto mt-24 sm:!mt-28 mb-8 flex items-center justify-between"
     >
-      <a href="/legalthing">
+      <a href="/bc/ueberuns">
         <span class="text-gray-600">
-          thing
+          Über uns
         </span>
       </a>
-      <a href="/legalthing">
+      <a href="/bc/AGB">
         <span class="text-gray-600">
-          thing
+          AGB`s
         </span>
       </a>
-      <a href="/legalthing">
+      <a href="/bc/Datenschutzbestimmung">
         <span class="text-gray-600">
-          thing
-        </span>
-      </a>
-      <a href="/legalthing">
-        <span class="text-gray-600">
-          thing
+          Datenschutz Bestimmungen
         </span>
       </a>
     </footer>

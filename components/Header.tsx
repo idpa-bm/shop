@@ -13,18 +13,12 @@ export function Header() {
         <a href="/">
           <img
             src="/logo_icon.svg"
-            alt="Deno Logo"
+            alt="Logo"
             class="h-20 w-20"
           />
         </a>
-        <h1>
-          <img
-            src="/text_logo.png"
-            alt="Duftsymphonie"
-            class="h-16"
-            width="200"
-            height="24"
-          />
+        <h1 class="text-5xl" style="	font-family: 'bellfortroughdemo'">
+          Duftsymphonie
         </h1>
         <Cart />
       </nav>

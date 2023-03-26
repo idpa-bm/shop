@@ -10,6 +10,12 @@ export default {
     transparent: "transparent",
     red: colors.red,
   },
+  theme: {
+    extend: {
+      fontFamily: {
+      },
+    }
+  },
   extend: {
     spacing: {
       18: "4.5rem",
