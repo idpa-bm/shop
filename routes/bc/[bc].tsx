@@ -19,7 +19,7 @@ export const handler: Handlers<{}> = {
   
     const html = render(res);
     
-    return ctx.render({content:html.replaceAll("<h2", "<h2 class='text-2xl font-bold mt-8 mb-4'").replaceAll("<h1", "<h1 class='text-3xl font-bold mt-8 mb-4'")});
+    return ctx.render({content:html.replaceAll("<h2", "<h2 class='text-2xl font-bold mt-8 mb-4'").replaceAll("<h1", "<h1 class='text-3xl font-bold mt-8 mb-4'").replaceAll("<a class='anchor'",("<a class='anchor invisible'")});
   },
 };
 
