@@ -35,12 +35,14 @@ const q = `{
 
 interface Data {
   products: List<Product>;
+    way: string;
 }
 
 export const handler: Handlers<Data> = {
   async GET(_req, ctx) {
     fetch("https://eu-central-1.aws.data.mongodb-api.com/app/application-0-tvajx/endpoint/idpa/count?path=" + ctx.params.way )
     const data = await graphql<Data>(q);
+    data.way = ctx.params.way;
     return ctx.render(data);
   },
 };
@@ -51,7 +53,7 @@ export default function Home(ctx: PageProps<Data>) {
   return (
     <div>
       <HeadElement
-        description="Duftsymphony"
+        description={"Duftsymphony"+"  " + way}
         image={url.href + "logo_icon.svg"}
         title="Duftsymphony"
         url={url}
