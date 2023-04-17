@@ -39,8 +39,12 @@ interface Data {
 }
 
 export const handler: Handlers<Data> = {
-  async GET(_req, ctx) {
-    const way =  ctx.params.way === "direct" ? "direct2" : ctx.params.way; 
+  async GET(req, ctx) {
+    if(ctx.params.way == "direct") 
+    {      
+      return Response.redirect(req.url +"2");
+    }
+    const way = ctx.params.way; 
     fetch("https://eu-central-1.aws.data.mongodb-api.com/app/application-0-tvajx/endpoint/idpa/count?path=" + way)
     const data = await graphql<Data>(q);
     data.way = way;  
