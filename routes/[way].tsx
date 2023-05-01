@@ -45,7 +45,6 @@ export const handler: Handlers<Data> = {
       return Response.redirect(req.url +"2");
     }
     const way = ctx.params.way; 
-   // fetch("https://eu-central-1.aws.data.mongodb-api.com/app/application-0-tvajx/endpoint/idpa/count?path=" + way)
     const data = await graphql<Data>(q);
     data.way = way;  
     return ctx.render(data);
