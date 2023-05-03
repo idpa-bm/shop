@@ -12,8 +12,6 @@ export async function graphql<T>(
   query: string,
   variables: Record<string, unknown> = {},
 ): Promise<T> {
-  console.log(`graphql: ${query}`, variables);
-  
   const resp = await fetch(`https://${SHOPIFY_SHOP}/api/2022-04/graphql.json`, {
     method: "POST",
     headers: {
@@ -27,12 +25,8 @@ export async function graphql<T>(
     throw new Error(`${resp.status} ${body}`);
   }
   const json = await resp.json();
-  console.log("graphql response", json);
-  
   if (json.errors) {
     throw new Error(json.errors.map((e: Error) => e.message).join("\n"));
   }
-  console.log("graphql 2response", json);
-  
   return json.data as T;
 }

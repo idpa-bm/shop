@@ -55,7 +55,11 @@ export const handler: Handlers<Data> = {
 
 export default function Home(ctx: PageProps<Data>) {
   const { data, url } = ctx;
+  console.log(data, url);
+  
   const products = data.products.nodes;
+  console.log(products);
+  
   return (
     <div>
       <HeadElement
