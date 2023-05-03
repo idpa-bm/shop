@@ -46,6 +46,8 @@ export const handler: Handlers<Data> = {
     }
     const way = ctx.params.way; 
     const data = await graphql<Data>(q);
+    console.log(data);
+    
     data.way = way;  
     return ctx.render(data);
   },
