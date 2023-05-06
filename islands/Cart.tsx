@@ -9,7 +9,7 @@ import {
   removeFromCart,
   useCart,
 } from "@/utils/data.ts";
-
+/*
 // Lazy load a <dialog> polyfill.
 // @ts-expect-error HTMLDialogElement is not just a type!
 if (IS_BROWSER && window.HTMLDialogElement === "undefined") {
@@ -39,13 +39,13 @@ const backdrop = css({
   "&::backdrop": {
     background: "rgba(0, 0, 0, 0.5)",
   },
-});
+});*/
 
 export default function Cart() {
+/*
   const { data, error } = useCart();
 
   const ref = useRef<HTMLDialogElement | null>(null);
-
   const onDialogClick = (e: MouseEvent) => {
     if ((e.target as HTMLDialogElement).tagName === "DIALOG") {
       ref.current!.close();
@@ -54,28 +54,31 @@ export default function Cart() {
 
   if (error) {
     return <div>Error: {error.message}</div>;
-  }
+  }*/
 
   return (
     <div>
       <button
-        onClick={() => ref.current!.showModal()}
+        onClick={() => /*ref.current!.showModal()*/}
         class="flex items-center gap-2 items-center border-2 border-gray-800 rounded-full px-5 py-1 font-semibold text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300"
       >
         <IconCart />
-        {data?.lines.nodes.length ?? "0"}
+        {/*data?.lines.nodes.length ?? "0"*/}0
       </button>
+      </div>
+  );
+      /*
       <dialog
         ref={ref}
         class={tw`bg-transparent p-0 m-0 pt-[50%] sm:pt-0 sm:ml-auto max-w-full sm:max-w-lg w-full max-h-full h-full ${slideBottom} sm:${slideRight} ${backdrop}`}
         onClick={onDialogClick}
       >
         <CartInner cart={data} />
-      </dialog>
+      </dialog> -->
     </div>
-  );
+  );*/
 }
-
+/*
 function CartInner(props: { cart: CartData | undefined }) {
   const corners = "rounded(tl-2xl tr-2xl sm:(tr-none bl-2xl))";
   const card =
