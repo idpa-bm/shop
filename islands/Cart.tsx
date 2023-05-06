@@ -9,6 +9,7 @@ import {
   removeFromCart,
   useCart,
 } from "@/utils/data.ts";
+
 /*
 // Lazy load a <dialog> polyfill.
 // @ts-expect-error HTMLDialogElement is not just a type!
