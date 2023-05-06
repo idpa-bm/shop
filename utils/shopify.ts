@@ -12,6 +12,11 @@ export async function graphql<T>(
   query: string,
   variables: Record<string, unknown> = {},
 ): Promise<T> {
+  return await JSON.parse(await Deno.readTextFile(`./mock/${variables.product ? variables.product : variables.id ? 'cart' : 'products' }.json`)) as T
+}
+
+/*
+{
   const resp = await fetch(`https://${SHOPIFY_SHOP}/api/2022-04/graphql.json`, {
     method: "POST",
     headers: {
@@ -28,5 +33,9 @@ export async function graphql<T>(
   if (json.errors) {
     throw new Error(json.errors.map((e: Error) => e.message).join("\n"));
   }
+  console.log(JSON.stringify(json.data));
+  
+  Deno.writeTextFile(`./mock/${variables.product}.json`, JSON.stringify(json.data))
   return json.data as T;
 }
+*/

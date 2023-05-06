@@ -46,7 +46,6 @@ export const handler: Handlers<Data> = {
     }
     const way = ctx.params.way; 
     const data = await graphql<Data>(q);
-    console.log(data);
     
     data.way = way;  
     return ctx.render(data);
@@ -55,11 +54,8 @@ export const handler: Handlers<Data> = {
 
 export default function Home(ctx: PageProps<Data>) {
   const { data, url } = ctx;
-  console.log(data, url);
-  
-  const products = data.products.nodes;
-  console.log(products);
-  
+ 
+  const products = data.products.nodes;  
   return (
     <div>
       <HeadElement
