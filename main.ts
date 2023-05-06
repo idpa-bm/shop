@@ -10,7 +10,5 @@ import manifest from "./fresh.gen.ts";
 import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
 
-import { gaPlugin } from "ga/mod.ts";
-const GA = "sdfasdfasdf"
 
-await start(manifest, { plugins: [twindPlugin(twindConfig),gaPlugin({ gaKey: GA })], port: 3000 });
+await start(manifest, { plugins: [twindPlugin(twindConfig)], port: 3000 });
