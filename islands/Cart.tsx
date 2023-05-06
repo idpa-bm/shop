@@ -60,13 +60,13 @@ export default function Cart() {
   return (
     <div>
       <button
-        onClick={() => /*ref.current!.showModal()*/}
+        onClick={() => /*ref.current!.showModal()*/console.log("clicked")}
         class="flex items-center gap-2 items-center border-2 border-gray-800 rounded-full px-5 py-1 font-semibold text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300"
       >
         <IconCart />
         {/*data?.lines.nodes.length ?? "0"*/}0
       </button>
-      </div>
+    </div>
   );
       /*
       <dialog
