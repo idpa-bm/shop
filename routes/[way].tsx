@@ -40,10 +40,6 @@ interface Data {
 
 export const handler: Handlers<Data> = {
   async GET(req, ctx) {
-    if(ctx.params.way == "direct") 
-    {      
-      return Response.redirect(req.url);
-    }
     const way = ctx.params.way; 
     const data = await graphql<Data>(q);
     
